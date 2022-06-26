@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    background-color: #1A1919;
+    font-family: 'Inter', sans-serif;
+}
+
+/* typography */
+
+/* Header */
+
+header form {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.seed-color {
+    width: 55px;
+    height: 40px;
+    background: #E5E5E5;
+    border: none;
+}
+
+.color-scheme {
+    font-family: inherit;
+    font-weight: 500;
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    width: 275px;
+    height: 40px;
+    font-size: 1.1rem;
+}
+
+.color-scheme-btn {
+    font-family: inherit;
+    width: 130px;
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    height: 40px;
+}
+
+/* Layout */
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 0 1em;
+}
+
+.color-container, 
+.value-container {
+    display: flex;
+    justify-content: center;
+}
+
+.color-container div,
+.value-container div {
+    width: 110px;
+}
+
+.color-container div {
+    height: 550px;
+}
+
+.value-container div {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#color1 {
+    background-color: #000000;
+}
+#color2 {
+    background-color: #1A1919;
+}
+#color3 {
+    background-color: #343232;
+}
+#color4 {
+    background-color: #4F4A4A;
+}
+#color5 {
+    background-color: #4F4A4A;
+}
+
+/* Media Queries */
+
+@media (max-width: 450px) {
+    
+    body {
+        font-size: .85rem;
+    }
+
+    header form {
+        height: 100%;
+        display: grid;
+        grid-template-areas:
+    'seed-color color-scheme'
+    'seed-color color-scheme-btn';
+        padding-top: 1em;
+        gap: .5em;
+    }
+    .container {
+        max-width: 300px;
+
+    }
+    
+    .color-container, 
+    .value-container {
+        flex-direction: column;
+    }
+
+    .color-container div,
+    .value-container div {
+        height: 75px;
+    }
+
+    .color-container div {
+        width: 180px;
+    }
+
+    main {
+        display: flex;
+        padding: .5em 0;
+    }
+
+    .value-container {
+        order: 0;
+    }
+
+    .color-container {
+        order: 1;
+    }
+
+    .color-scheme {
+        width: 200px;
+        height: 40px;
+        font-size: 1rem;
+        grid-area: color-scheme;
+    }
+    
+    .color-scheme-btn {
+        width: 130px;
+        height: 40px;
+        grid-area: color-scheme-btn;
+        justify-self: center;
+    }
+    .seed-color {
+        grid-area: seed-color;
+    }
+}
